@@ -10,10 +10,14 @@ import re
 
 scriptname = "parser.py"
 
-def usage():
-    print("Please supply a filename or pipe maillog_test to script")
-    print("Usage: ' cat maillog_test |", scriptname,"> outputfile.txt ' OR")
-    print("'",scriptname, "maillog_test > outputfile.txt '")
+def usage(param):
+    if param == "NoFileName":
+        print("Please supply a filename or pipe maillog_test to script")
+        print("Usage: ' cat maillog_test |", scriptname,"> outputfile.txt ' OR")
+        print("'",scriptname, "maillog_test > outputfile.txt '")
+    if param == "FileNotFound":
+        print("Supplied argument is not a filename. Please enter a valid")
+        print("filename like '",scriptname," maillog_test > outputfile.txt '")
 
 #function that does the brunt of the work. Parses the data stream
 def parse(data):
@@ -36,7 +40,7 @@ if sys.stdin.isatty():
         # If we get an IndexError we know the program has
         # been called without a filename   
     except IndexError:
-        usage()
+        usage("NoFileName")
         exit()
         # If we are here an argument has been supplied, but is it a filename?
     try:
@@ -46,10 +50,7 @@ if sys.stdin.isatty():
             # and output to StdOut
             parse(line)
     except FileNotFoundError:
-        print("Supplied argument is not a filename. Please enter a valid")
-        print("filename like '",scriptname," maillog_test > outputfile.txt '")
-    except NameError:
-        usage()
+        usage("FileNotFound")
         exit()
 else:
     # script is being called by pipe
