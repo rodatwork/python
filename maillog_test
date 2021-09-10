@@ -1,0 +1,8 @@
+Jul 21 06:28:28 apollo sendmail[15673]: u6LDSSeO015673: [192.0.2.155] did not issue MAIL/EXPN/VRFY/ETRN during connection to MTA
+Jul 21 06:28:28 apollo sendmail[15679]: u6LDSSdx015679: [192.0.2.155] did not issue MAIL/EXPN/VRFY/ETRN during connection to MTA
+Jul 21 06:28:29 apollo sendmail[15682]: u6LDSSVu015682: [192.0.2.155] did not issue MAIL/EXPN/VRFY/ETRN during connection to MTA
+Jul 21 16:31:04 apollo sendmail[29686]: AUTH=server, relay=server.example.computer [192.0.2.100] (may be forged), authid=oneuser@example.net, mech=LOGIN, bits=0
+Jul 21 06:55:44 apollo sendmail[22117]: AUTH=server, relay=[198.51.100.50], authid=oneuser@example.com, mech=LOGIN, bits=0
+aalJul 21 15:43:58 apollo sendmail[20393]: AUTH=server, relay=host-203.0.113.25.example.net [233.252.0.10] (may be forged), authid=cerebus, mech=LOGIN, bits=0
+aalJul 21 16:29:34 apollo sendmail[29368]: AUTH=server, relay=cloudserver12345.example.org [233.252.0.75], authid=oneuser@example.net, mech=LOGIN, bits=0
+Jul 21 06:28:29 apollo sendmail[15685]: u6LDSShR015685: mail.example.edu [192.0.2.83] did not issue MAIL/EXPN/VRFY/ETRN during connection to MTA
